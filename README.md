@@ -1,16 +1,61 @@
-# React + Vite
+# Redux Toolkit Movie List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React + Redux Toolkit project for managing a simple list of movies.  
+The app lets you add new movies and remove existing ones, using a clean and minimal Tailwind-based UI.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- View a list of movies
+- Add a new movie via input form
+- Remove a movie from the list
+- Global state management with Redux Toolkit
+- Simple, responsive UI built with Tailwind CSS
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Redux Toolkit
+- React Redux
+- Vite
+- Tailwind CSS
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `src/store.js` – Redux store configuration using `configureStore`
+- `src/movieSlice.js` – movie slice with actions and reducer
+- `src/components/MovieInput.jsx` – input and button to add a movie
+- `src/components/MovieList.jsx` – list of movies with delete buttons
+- `src/App.jsx` – main layout and composition of components
+- `src/main.jsx` – React entry point with `<Provider>` and store
+
+## Getting Started
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run the dev server
+
+```bash
+npm run dev
+```
+
+Then open the URL printed in the terminal (usually `http://localhost:5173`).
+
+### Build for production
+
+```bash
+npm run build
+```
+
+## Learning Goals
+
+This project is mainly for practicing:
+
+- Setting up Redux Toolkit with `configureStore` and `createSlice`
+- Connecting Redux to React via `Provider`, `useSelector`, and `useDispatch`
+- Organizing application state in a clear and simple way
+- Styling a small React app with Tailwind CSS
+```
